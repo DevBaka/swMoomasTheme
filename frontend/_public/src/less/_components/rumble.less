@@ -1,0 +1,25 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10.09.2019, 14:10:54
+    Author     : jannis
+*/
+
+body{
+    background: @backgroundColor;
+}
+
+@-webkit-keyframes rumble{
+    0% {.transform(rotate(0deg));}
+    25% {.transform(translate(2px, 0px) rotate(0deg));}
+    50% {.transform(translate(0px, -2px) rotate(0deg));}
+    75% {.transform(translate(-2px, 0px) rotate(0deg));}
+    100% {.transform(translate(0px, 2px) rotate(0deg));}
+}
+
+.rumble{
+    .animation(rumble .0625s infinite linear);
+}
