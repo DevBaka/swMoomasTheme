@@ -9,7 +9,7 @@
     
     {assign "Kategories" []}
 
-    <ul>
+    <ul class="ulContainer">
         some array: <br>
         {*foreach $sCategories as $sCategory*}
         {*foreach $sCategories|@sort as $sCategory*}
@@ -28,12 +28,12 @@
                     {assign var='key' value=$k}
                 {/if}
             {/foreach}
-            <li>{$name} | ID: {$key}-{$Kategories[$key]} <br>link: {$sCategories[$key]['link']} </li>
+            <li>{$name} | ID: {$key}-{$Kategories[$key]} <br>link: <a href="{$sCategories[$key]['link']}">{$Kategories[$key]}</a> </li>
         {/foreach}
         <br><hr>
         SKategories: 
         Hello Git !
-        {*$sCategories|print_r*}
+        {$sCategories|print_r}
         <br><hr>
         Kategories:
         

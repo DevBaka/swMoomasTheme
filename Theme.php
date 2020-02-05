@@ -25,7 +25,8 @@ class Theme extends \Shopware\Components\Theme{
         'src/js/jquery.cart-animation.js',
         'src/js/jquery.slider-demo.js',
         'src/js/jquery.scroll-nav.js',
-        'src/js/jquery.helloworld.js'
+        'src/js/jquery.helloworld.js',
+        'src/js/jquery.drop-down-menu.js'
     ];
     
     
