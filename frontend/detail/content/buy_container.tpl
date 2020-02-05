@@ -31,17 +31,12 @@
             <li>{$name} | ID: {$key}-{$Kategories[$key]} <br>link: <a href="{$sCategories[$key]['link']}">{$Kategories[$key]}</a> </li>
         {/foreach}
         <br><hr>
-        SKategories: 
-        Hello Git !
-        {$sCategories|print_r}
+        SKategories:
+        {*$sCategories|print_r*}
         <br><hr>
-        Kategories:
-        
-        {$Kategories|print_r}
+        Kategories
+        {*$Kategories|print_r*}
         <br><hr>
     </ul>
-        
-        
-        <br> and here more of a array: <br>
 
 {/block}
