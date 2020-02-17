@@ -62,7 +62,24 @@
 
 <div class="advanced-menu" data-advanced-menu="true" data-hoverDelay="{$hoverDelay}">
     {block name="frontend_plugins_advanced_menu"}
+        {*foreach from=$sAdvancedMenu|@sortby:"name" item=$mainCategory*}
+
+
+        {foreach $Kategories as $name}
+
+            {foreach from=$Kategories key='k' item='i'}
+                {if $i == $name}
+                    {assign var='key' value=$k}
+                {/if}
+            {/foreach}
+            <!--<a href="{$sCategories[$key]['link']|escapeHtml}" class="menu--list-item-link" aria-label="{$category.name|escape}" title="{$category.name|escape}"{if $category.external && $category.externalTarget} target="{$category.externalTarget}"{/if}>{$Kategories[$key]}</a>
+                -->
+        {/foreach}
+
+
+
         {foreach $sAdvancedMenu|@sort  as  $mainCategory}
+        {*foreach from=$sAdvancedMenu|@sortby:"name" item=$mainCategory*}
             {if !$mainCategory.active || $mainCategory.hideTop}
                 {continue}
             {/if}
@@ -79,9 +96,10 @@
                 {block name="frontend_plugins_advanced_menu_main_container"}
                     <div class="button-container">
                         {block name="frontend_plugins_advanced_menu_button_category"}
+
                             <a href="{$link|escapeHtml}" class="button--category" aria-label="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}" title="{s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name|escape:'html'}"{if $mainCategory.external && $category.externalTarget} target="{$mainCategory.externalTarget}"{/if}>
                                 <i class="icon--arrow-right"></i>
-                                {s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name}
+                                {s name="toCategoryBtn" namespace="frontend/plugins/advanced_menu/advanced_menu"}{/s}{$mainCategory.name}-Baka
                             </a>
                         {/block}
 
