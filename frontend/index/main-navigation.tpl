@@ -28,7 +28,7 @@
                                 {assign var='key' value=$k}
                             {/if}
                         {/foreach}
-                                <li class="navigation--entry{if $sCategories[$key]['flag']} is--active{/if}" role="menuitem">
+                                <li class="navigation--entry{if $sCategories[$key]['flag']} {/if}" role="menuitem">
                                     <a class="navigation--link{if $sCategories[$key]['flag']} is--active{/if}" href="{$sCategories[$key]['link']}" title="{$Kategories[$key]}" aria-label="{$Kategories[$key]}" itemprop="url"{if $sCategory.external && $sCategory.externalTarget} target="{$sCategory.externalTarget}"{/if}>
                                         <span itemprop="name">{$Kategories[$key]}</span>
                                     </a>

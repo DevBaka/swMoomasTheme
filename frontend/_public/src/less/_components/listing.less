@@ -1,0 +1,64 @@
+.is--ctl-listing .product--box.box--minimal img {
+  margin-left: 0;
+}
+
+.seo_einleitungstext{
+  margin-top: 10px;
+}
+
+.teaser--text-long{
+  display: none;
+}
+.content--title{
+  display: none;
+}
+/*
+html.no-js.has--history.has--localstorage.has--sessionstorage.has--cssanimations.is--firefox.is--gecko body.is--ctl-listing.is--act-index.is--neonunitarticles div.page-wrap section.content-main.container.block-group div.content-main--inner div.content--wrapper div.content.listing--content div.hero-unit.category--teaser.panel.has--border.is--rounded{
+    display: none;
+}*/
+
+@media screen and (min-width: @tabletViewportWidth){
+  .is--ctl-listing {
+
+    .content-main--inner{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .listing--content{
+      margin-top: 10px;
+    }
+
+    .hero--headline {
+      padding-top: 0px;
+    }
+  }
+
+  .teaser--text-long{
+    display: inline;
+  }
+
+}
+
+@media screen and (min-width: @desktopViewportWidth) {
+  .is--ctl-listing {
+
+    .container{
+      max-width: 1440px;
+    }
+
+    .content-main--inner{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .listing--content{
+      padding-top: 0px;
+    }
+
+    .hero--headline {
+
+    }
+
+  }
+}

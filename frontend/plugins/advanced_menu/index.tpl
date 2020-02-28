@@ -10,7 +10,7 @@
             
             
             {assign "Kategories" []}
-            {debug}
+            {*debug*}
             {foreach $sCategories|@sort as $sCategory}
                 {append 'Kategories' value=$sCategory['name'] index=$sCategory['id']}
             {/foreach}
